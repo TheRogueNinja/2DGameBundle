@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Match_Tiles.unity
+- path: Assets/Scenes/Welcom_Scene.unity
   isLoaded: 1
   isActive: 1
