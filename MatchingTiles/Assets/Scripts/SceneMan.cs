@@ -14,8 +14,12 @@ public class SceneMan : MonoBehaviour {
 	public void loadMatchTiles(){
 		SceneManager.LoadScene(1);
 	}
-	void OnMouseOver(){
-		anim.Play("TileFlip");
-		anim.Play("TileFlip");
+	public void loadSlideTiles(){
+		SceneManager.LoadScene(2);
+	}
+	void Update(){
+		if(Input.GetKey(KeyCode.Escape)){
+			Application.Quit();
+		}
 	}
 }

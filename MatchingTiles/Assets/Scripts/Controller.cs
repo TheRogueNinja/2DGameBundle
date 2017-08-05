@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour {
 	[SerializeField]
@@ -86,7 +87,11 @@ public class Controller : MonoBehaviour {
 		if(countCorrectGuess==gameGuess){
 			Debug.Log("Game Ended");
 			Debug.Log("You took "+countGuess+" guesses to finish the game..");
+			Invoke("SceneChange",1f);
 		}
+	}
+	void SceneChange(){
+		SceneManager.LoadScene(0);
 	}
 	void shuffler(List<Sprite> l){
 		for(int i = 0;i<l.Count;i++){
